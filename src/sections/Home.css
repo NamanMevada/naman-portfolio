@@ -1,0 +1,161 @@
+#home {
+    padding-top: 0;
+    padding-bottom: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Background Decorations */
+.bg-dots-grid {
+    position: absolute;
+    top: 120px;
+    right: 80px;
+    width: 120px;
+    height: 80px;
+    background-image: radial-gradient(var(--accent-purple) 20%, transparent 20%);
+    background-size: 20px 20px;
+    opacity: 0.3;
+    z-index: 1;
+    animation: fadeIn 1s ease 1s both;
+}
+
+.bg-squiggle {
+    position: absolute;
+    top: 55%;
+    right: 10%;
+    width: 100px;
+    height: 20px;
+    z-index: 1;
+    animation: fadeIn 1s ease 1.2s both;
+}
+
+.bg-capsule-small {
+    position: absolute;
+    bottom: 15%;
+    left: 10%;
+    width: 100px;
+    height: 45px;
+    background-color: var(--accent-purple);
+    border-radius: 50px;
+    transform: rotate(-45deg);
+    z-index: 1;
+    opacity: 0.5;
+    animation: fadeIn 1s ease 1.4s both;
+}
+
+/* NAMAN Watermark - Large Outline Text */
+.home-watermark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12rem;
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke: 2px var(--watermark-stroke);
+    z-index: 0;
+    pointer-events: none;
+    letter-spacing: 5px;
+    white-space: nowrap;
+    animation: fadeIn 1.5s ease 0.3s both;
+}
+
+/* Home Container */
+.home-container {
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    text-align: center;
+}
+
+.home-text {
+    padding-right: 0;
+    margin: 0 auto;
+}
+
+#home h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    color: var(--text-white);
+    animation: fadeInUp 0.7s ease 0.3s both;
+}
+
+.name-highlight {
+    color: var(--accent-purple);
+}
+
+.typewriter-code {
+    font-family: 'Fira Code', monospace;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--text-gray);
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeInUp 0.7s ease 0.5s both;
+}
+
+.code-bracket {
+    color: var(--accent-purple);
+    font-weight: 700;
+    margin: 0 5px;
+}
+
+.cursor {
+    display: inline-block;
+    width: 2px;
+    background-color: var(--accent-purple);
+    animation: blink 1s infinite;
+    margin-left: 2px;
+}
+
+.home-desc {
+    color: var(--text-gray);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 35px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeInUp 0.7s ease 0.7s both;
+}
+
+#home .btn-group {
+    animation: fadeInUp 0.7s ease 0.9s both;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .home-container {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .home-text {
+        padding-right: 0;
+    }
+
+    .home-watermark {
+        font-size: 5rem;
+    }
+
+    .bg-capsule-small {
+        display: none;
+    }
+
+    #home h1 {
+        font-size: 2.5rem;
+    }
+
+    .typewriter-code {
+        font-size: 1rem;
+    }
+}

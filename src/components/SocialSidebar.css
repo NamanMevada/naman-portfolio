@@ -1,0 +1,28 @@
+.social-sidebar {
+    position: fixed;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    z-index: 100;
+}
+
+.social-link {
+    color: var(--text-gray);
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    animation: fadeInRight 0.5s ease both;
+}
+
+.social-link:hover {
+    color: var(--accent-purple);
+    transform: translateY(-3px);
+}
+
+@media (max-width: 900px) {
+    .social-sidebar {
+        display: none;
+    }
+}
