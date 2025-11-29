@@ -40,6 +40,7 @@ const Home = () => {
 
     return (
         <section id="home">
+            {/* Background Decorations */}
             <div className="bg-dots-grid"></div>
             <svg className="bg-squiggle" viewBox="0 0 100 20">
                 <path 
@@ -52,7 +53,8 @@ const Home = () => {
             </svg>
             <div className="bg-capsule-small"></div>
 
-            <span className="home-watermark">NAMAN</span>
+            {/* NAMAN Watermark Text */}
+            <span className="watermark home-watermark">NAMAN</span>
 
             <div className="home-container">
                 <div className="home-text">

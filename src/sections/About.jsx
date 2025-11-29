@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import './About.css';
 
+// Import Local Icons
 import html5Icon from '../assets/icons/html5-original.svg';
 import css3Icon from '../assets/icons/css3-original.svg';
 import javascriptIcon from '../assets/icons/javascript-original.svg';
@@ -9,6 +10,8 @@ import reactIcon from '../assets/icons/react-original.svg';
 import figmaIcon from '../assets/icons/figma-original.svg';
 import gitIcon from '../assets/icons/git-original.svg';
 
+// Import Local Lottie JSON
+import developerAnimation from '../assets/developer-animation.json';
 
 const About = () => {
     const [visualVisible, setVisualVisible] = useState(false);
@@ -35,7 +38,7 @@ const About = () => {
         return () => observer.disconnect();
     }, []);
 
-    // ✅ Updated skills array with local icons
+    // LOCAL SKILLS
     const skills = [
         { name: 'HTML5', icon: html5Icon },
         { name: 'CSS3', icon: css3Icon },
@@ -49,43 +52,57 @@ const About = () => {
     return (
         <section id="about">
             <div className="about-container">
-                <div 
-                    ref={visualRef} 
+
+                {/* LEFT SIDE - LOTTIE ANIMATION */}
+                <div
+                    ref={visualRef}
                     className={`about-visual animate-left ${visualVisible ? 'visible' : ''}`}
                 >
                     <div className="deco-bar bar-1"></div>
                     <div className="deco-bar bar-2"></div>
-                    <lottie-player 
-                        src="https://assets2.lottiefiles.com/packages/lf20_u4jjb9bd.json" 
-                        background="transparent" 
-                        speed="1" 
-                        style={{ width: '100%', maxWidth: '450px', height: 'auto' }} 
-                        loop 
+
+                    {/* LOCAL LOTTIE FILE */}
+                    <lottie-player
+                        src={developerAnimation}
+                        background="transparent"
+                        speed="1"
+                        style={{ width: '100%', maxWidth: '450px', height: 'auto' }}
+                        loop
                         autoplay
                     ></lottie-player>
                 </div>
-                <div 
-                    ref={contentRef} 
+
+                {/* RIGHT SIDE CONTENT */}
+                <div
+                    ref={contentRef}
                     className={`about-content animate-right ${contentVisible ? 'visible' : ''}`}
                 >
                     <span className="about-watermark">ABOUT</span>
                     <h2 className="section-title">Know Me More</h2>
+
                     <p className="about-desc">
-                        Hi, I'm <strong>Naman Mevada</strong>, a passionate Frontend Developer focused on building responsive, user-friendly web applications. I love translating designs into clean, efficient code.
+                        Hi, I'm <strong>Naman Mevada</strong>, a passionate Frontend Developer focused on
+                        building responsive, user-friendly web applications. I love translating designs
+                        into clean, efficient code.
                     </p>
+
                     <div className="education-box">
                         <h4 className="edu-degree">B.Tech in Information Technology</h4>
-                        <span className="edu-school">@ Sankalchand Patel College of Engineering, Visnagar</span>
+                        <span className="edu-school">
+                            @ Sankalchand Patel College of Engineering, Visnagar
+                        </span>
                         <div className="edu-year">Oct 2021 - Apr 2025</div>
                         <p style={{ fontSize: '0.9rem', color: 'var(--text-gray)', margin: 0 }}>
                             Successfully completed my B.Tech with a 7.3 CGPA.
                         </p>
                     </div>
+
                     <h3 className="skills-title">My Skills</h3>
+
                     <div className="skills-grid">
                         {skills.map((skill, index) => (
-                            <div 
-                                key={index} 
+                            <div
+                                key={index}
                                 className={`skill-item animate-scale ${contentVisible ? 'visible' : ''}`}
                                 title={skill.name}
                                 style={{ transitionDelay: `${index * 0.1}s` }}
@@ -95,6 +112,7 @@ const About = () => {
                         ))}
                     </div>
                 </div>
+
             </div>
         </section>
     );
