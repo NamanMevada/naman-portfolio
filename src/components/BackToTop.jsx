@@ -18,12 +18,12 @@ const BackToTop = () => {
     };
 
     return (
-        <div 
+        <button 
             className={`back-to-top ${isVisible ? 'active' : ''}`}
             onClick={scrollToTop}
         >
-            <i className="fa-solid fa-arrow-up"></i>
-        </div>
+            <span className="arrow-up"></span>
+        </button>
     );
 };
 

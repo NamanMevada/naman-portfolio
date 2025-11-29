@@ -1,5 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import './Works.css';
+import project1 from '../assets/images/project1.jpg';
+import project2 from '../assets/images/project2.png';
+import project3 from '../assets/images/project3.png';
 
 const Works = () => {
     const [headerVisible, setHeaderVisible] = useState(false);
@@ -21,23 +24,24 @@ const Works = () => {
         return () => observer.disconnect();
     }, []);
 
+    // ✅ Updated projects array with proper imported images
     const projects = [
         {
             title: 'Furneo',
             description: 'Have a look at a full furniture e-commerce website design.',
-            image: 'https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+            image: project1,  // ✅ Using imported image
             link: 'https://furneo.netlify.app/'
         },
         {
             title: 'CloudyBuddy',
             description: 'Have a look at simple weather forecast website with live updates.',
-            image: 'https://images.unsplash.com/photo-1561484930-998b6a7b22e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+            image: project2,  // ✅ Using imported image
             link: 'https://cloudybuddy.netlify.app/'
         },
         {
             title: 'My Portfolio',
             description: 'This is my personal portfolio showcasing my projects and skills.',
-            image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+            image: project3,  // ✅ Using imported image
             link: 'https://naman-mevada.netlify.app/'
         }
     ];

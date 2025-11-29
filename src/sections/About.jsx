@@ -1,7 +1,14 @@
 import { useEffect, useRef, useState } from 'react';
-import Lottie from 'lottie-react';
-import animationData from '../assets/developer-animation.json';
 import './About.css';
+
+import html5Icon from '../assets/icons/html5-original.svg';
+import css3Icon from '../assets/icons/css3-original.svg';
+import javascriptIcon from '../assets/icons/javascript-original.svg';
+import bootstrapIcon from '../assets/icons/bootstrap-original.svg';
+import reactIcon from '../assets/icons/react-original.svg';
+import figmaIcon from '../assets/icons/figma-original.svg';
+import gitIcon from '../assets/icons/git-original.svg';
+
 
 const About = () => {
     const [visualVisible, setVisualVisible] = useState(false);
@@ -28,14 +35,15 @@ const About = () => {
         return () => observer.disconnect();
     }, []);
 
+    // ✅ Updated skills array with local icons
     const skills = [
-        { name: 'HTML5', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg' },
-        { name: 'CSS3', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' },
-        { name: 'JavaScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
-        { name: 'Bootstrap', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg' },
-        { name: 'React', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
-        { name: 'Figma', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg' },
-        { name: 'Git', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' }
+        { name: 'HTML5', icon: html5Icon },
+        { name: 'CSS3', icon: css3Icon },
+        { name: 'JavaScript', icon: javascriptIcon },
+        { name: 'Bootstrap', icon: bootstrapIcon },
+        { name: 'React', icon: reactIcon },
+        { name: 'Figma', icon: figmaIcon },
+        { name: 'Git', icon: gitIcon }
     ];
 
     return (
@@ -47,12 +55,14 @@ const About = () => {
                 >
                     <div className="deco-bar bar-1"></div>
                     <div className="deco-bar bar-2"></div>
-                    <Lottie 
-                        animationData={animationData}
-                        loop={true}
-                        autoplay={true}
-                        style={{ width: '100%', maxWidth: '450px', height: 'auto' }}
-                    />
+                    <lottie-player 
+                        src="https://assets2.lottiefiles.com/packages/lf20_u4jjb9bd.json" 
+                        background="transparent" 
+                        speed="1" 
+                        style={{ width: '100%', maxWidth: '450px', height: 'auto' }} 
+                        loop 
+                        autoplay
+                    ></lottie-player>
                 </div>
                 <div 
                     ref={contentRef} 
