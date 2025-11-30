@@ -40,7 +40,7 @@ const Home = () => {
 
     return (
         <section id="home">
-            {/* Background Decorations */}
+            {/* Layer 0: Background Decorations */}
             <div className="bg-dots-grid"></div>
             <svg className="bg-squiggle" viewBox="0 0 100 20">
                 <path 
@@ -53,9 +53,10 @@ const Home = () => {
             </svg>
             <div className="bg-capsule-small"></div>
 
-            {/* NAMAN Watermark Text */}
-            <span className="watermark home-watermark">NAMAN</span>
+            {/* Layer 1: Watermark */}
+            <span className="home-watermark">NAMAN</span>
 
+            {/* Layer 2: Main Content */}
             <div className="home-container">
                 <div className="home-text">
                     <h1>Hello, I'm <span className="name-highlight">Naman Mevada</span></h1>
