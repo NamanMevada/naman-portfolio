@@ -3,6 +3,7 @@ import './Works.css';
 import project1 from '../assets/images/project1.jpg';
 import project2 from '../assets/images/project2.png';
 import project3 from '../assets/images/project3.png';
+import project4 from '../assets/images/project4.png';
 
 const Works = () => {
     const [headerVisible, setHeaderVisible] = useState(false);
@@ -24,25 +25,31 @@ const Works = () => {
         return () => observer.disconnect();
     }, []);
 
-    // ✅ Updated projects array with proper imported images
+    // ✅ Updated projects array with 4 projects
     const projects = [
         {
             title: 'Furneo',
             description: 'Have a look at a full furniture e-commerce website design.',
-            image: project1,  // ✅ Using imported image
+            image: project1,
             link: 'https://furneo.netlify.app/'
         },
         {
             title: 'CloudyBuddy',
             description: 'Have a look at simple weather forecast website with live updates.',
-            image: project2,  // ✅ Using imported image
+            image: project2,
             link: 'https://cloudybuddy.netlify.app/'
         },
         {
             title: 'My Portfolio',
             description: 'This is my personal portfolio showcasing my projects and skills.',
-            image: project3,  // ✅ Using imported image
+            image: project3,
             link: 'https://naman-mevada.netlify.app/'
+        },
+        {
+            title: 'School Website',
+            description: 'A modern React-based school website with clean UI and responsive design.',
+            image: project4,
+            link: 'https://namanmevada.github.io/react-schoolwebsite/'
         }
     ];
 
