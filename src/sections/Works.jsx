@@ -1,9 +1,12 @@
 import { useEffect, useRef, useState } from 'react';
 import './Works.css';
+
+// Images
 import project1 from '../assets/images/project1.jpg';
 import project2 from '../assets/images/project2.png';
 import project3 from '../assets/images/project3.png';
 import project4 from '../assets/images/project4.png';
+import project5 from '../assets/images/project5.png';   // ✅ NEW IMAGE
 
 const Works = () => {
     const [headerVisible, setHeaderVisible] = useState(false);
@@ -25,7 +28,7 @@ const Works = () => {
         return () => observer.disconnect();
     }, []);
 
-    // ✅ Updated projects array with 4 projects
+    // ✅ Updated projects array with 5 projects
     const projects = [
         {
             title: 'Furneo',
@@ -50,6 +53,12 @@ const Works = () => {
             description: 'A modern React-based school website with clean UI and responsive design.',
             image: project4,
             link: 'https://namanmevada.github.io/react-schoolwebsite/'
+        },
+        {
+            title: 'Habit Tracker',
+            description: 'Track your daily habits with a clean UI and smooth user experience.',
+            image: project5,
+            link: 'https://namanmevada.github.io/project04-hebit-tracker/'
         }
     ];
 
@@ -57,12 +66,14 @@ const Works = () => {
         <section id="works">
             <div className="works-wrapper">
                 <span className="watermark">PORTFOLIO</span>
+
                 <div 
                     ref={headerRef}
                     className={`works-header animate-on-scroll ${headerVisible ? 'visible' : ''}`}
                 >
                     <h2 className="section-title">My Works</h2>
                 </div>
+
                 <div className="works-container">
                     {projects.map((project, index) => (
                         <WorkCard key={index} project={project} index={index} />
@@ -105,6 +116,7 @@ const WorkCard = ({ project, index }) => {
                     <div className="overlay"><span>Click to View</span></div>
                 </div>
             </a>
+
             <div className="work-content">
                 <h3>{project.title}</h3>
                 <div className="project-detail-container">
