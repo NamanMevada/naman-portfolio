@@ -58,7 +58,7 @@ const Works = () => {
             title: 'Habit Tracker',
             description: 'Track your daily habits with a clean UI and smooth user experience.',
             image: project5,
-            link: 'https://namanmevada.github.io/project04-hebit-tracker/'
+            link: 'https://github.com/NamanMevada/project04-habit-tracker'
         }
     ];
 
