@@ -64,7 +64,7 @@ const Works = () => {
             title: 'IronFit Gym',
             description: 'A full gym website built with WordPress, Elementor and Astra theme.',
             image: project6,
-            link: 'https://github.com/NamanMevada/ironfit-gym'  // ✅ Change to your live URL later
+            link: 'https://ironfit-gymnasium.netlify.app/'  // ✅ Change to your live URL later
         }
     ];
 
