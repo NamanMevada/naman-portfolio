@@ -3,7 +3,7 @@ import './Home.css';
 
 const Home = () => {
     const [typeText, setTypeText] = useState('');
-    const words = ["A Passionate Web Developer", "Frontend Developer", "React.js Developer","PHP & WordPress Developer"];
+    const words = ["A Passionate Web Developer", "Frontend Developer","PHP & WordPress Developer"];
 
     useEffect(() => {
         let wordIndex = 0;
