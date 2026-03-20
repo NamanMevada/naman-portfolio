@@ -67,7 +67,7 @@ const Home = () => {
                         <span className="code-bracket">/&gt;</span>
                     </h2>
                     <p className="home-desc">
-                        I'm a passionate developer who specializes in building responsive and user-friendly web interfaces using React.js. I'm eager to collaborate and grow by turning ideas into clean, functional web applications!
+                       I’m a passionate web developer who loves creating responsive and user-friendly websites using modern technologies like React.js, PHP, WordPress, and Shopify. I enjoy turning ideas into clean and functional web applications.
                     </p>
                     <div className="btn-group">
                         <a href="#works" className="btn primary">View Work</a>
