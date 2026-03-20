@@ -9,6 +9,9 @@ import bootstrapIcon from '../assets/icons/bootstrap-original.svg';
 import reactIcon from '../assets/icons/react-original.svg';
 import figmaIcon from '../assets/icons/figma-original.svg';
 import gitIcon from '../assets/icons/git-original.svg';
+import wordpressIcon from '../assets/icons/wordpress-original.svg';
+import phpIcon from '../assets/icons/php-original.svg';
+import shopifyIcon from '../assets/icons/shopify-original.svg';
 
 // Import Local Lottie JSON
 import developerAnimation from '../assets/developer-animation.json';
@@ -46,7 +49,10 @@ const About = () => {
         { name: 'Bootstrap', icon: bootstrapIcon },
         { name: 'React', icon: reactIcon },
         { name: 'Figma', icon: figmaIcon },
-        { name: 'Git', icon: gitIcon }
+        { name: 'Git', icon: gitIcon },
+        { name: 'WordPress', icon: wordpressIcon },
+        { name: 'PHP', icon: phpIcon },
+        { name: 'Shopify', icon: shopifyIcon },
     ];
 
     return (

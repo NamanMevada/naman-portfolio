@@ -6,7 +6,8 @@ import project1 from '../assets/images/project1.jpg';
 import project2 from '../assets/images/project2.png';
 import project3 from '../assets/images/project3.png';
 import project4 from '../assets/images/project4.png';
-import project5 from '../assets/images/project5.png';   // ✅ NEW IMAGE
+import project5 from '../assets/images/project5.png';
+import project6 from '../assets/images/project6.png';   // ✅ IronFit Gym
 
 const Works = () => {
     const [headerVisible, setHeaderVisible] = useState(false);
@@ -28,7 +29,6 @@ const Works = () => {
         return () => observer.disconnect();
     }, []);
 
-    // ✅ Updated projects array with 5 projects
     const projects = [
         {
             title: 'Furneo',
@@ -59,6 +59,12 @@ const Works = () => {
             description: 'Track your daily habits with a clean UI and smooth user experience.',
             image: project5,
             link: 'https://github.com/NamanMevada/project04-habit-tracker'
+        },
+        {
+            title: 'IronFit Gym',
+            description: 'A full gym website built with WordPress, Elementor and Astra theme.',
+            image: project6,
+            link: 'https://github.com/NamanMevada/ironfit-gym'  // ✅ Change to your live URL later
         }
     ];
 
@@ -67,7 +73,7 @@ const Works = () => {
             <div className="works-wrapper">
                 <span className="watermark">PORTFOLIO</span>
 
-                <div 
+                <div
                     ref={headerRef}
                     className={`works-header animate-on-scroll ${headerVisible ? 'visible' : ''}`}
                 >
@@ -105,7 +111,7 @@ const WorkCard = ({ project, index }) => {
     }, []);
 
     return (
-        <div 
+        <div
             ref={cardRef}
             className={`work-card animate-on-scroll ${cardVisible ? 'visible' : ''}`}
             style={{ transitionDelay: `${index * 0.15}s` }}
